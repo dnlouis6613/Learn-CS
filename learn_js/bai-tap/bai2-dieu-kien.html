@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài tập 2: Cấu trúc điều kiện</title>
+    <!--
+    ╔════════════════════════════════════════════════════════════════╗
+    ║  BÀI TẬP 2: IF / ELSE IF / SWITCH / TERNARY                     ║
+    ╚════════════════════════════════════════════════════════════════╝
+
+    Bối cảnh: chấm điểm & xếp loại trong app YouPass. Mở Console (F12).
+
+    📌 Nhiệm vụ:
+
+    1. Cho: let band = 6.5;
+       Viết if-else if-else XẾP LOẠI và in ra:
+         - band >= 8.0  → "Expert"
+         - band >= 6.5  → "Competent"
+         - band >= 5.0  → "Modest"
+         - còn lại       → "Beginner"
+       (Nhớ: xếp điều kiện từ CAO xuống THẤP!)
+
+    2. Cho: let soCauDung = 18; const TONG = 40;
+       Dùng TOÁN TỬ 3 NGÔI in:
+         "Bạn đã đạt yêu cầu." nếu đúng >= 20 câu,
+         ngược lại "Bạn chưa đạt yêu cầu."
+
+    3. Cho: let kyNang = "Writing";
+       Dùng switch-case in THỜI LƯỢNG:
+         Listening → 30 phút, Reading → 60 phút,
+         Writing → 60 phút, Speaking → "11–14 phút",
+         mặc định → "Không hợp lệ".
+       (Đừng quên break!)
+
+    4. Cho: let band = 6.5; let daNopBai = true;
+       Dùng toán tử LOGIC && in true/false cho:
+         "Đậu khi band >= 6.0 VÀ đã nộp bài".
+
+    💡 GỢI Ý:
+    - Dùng === (3 dấu bằng) khi so sánh, KHÔNG dùng ==.
+    - if kiểm tra lần lượt từ trên xuống, gặp đúng đầu tiên thì dừng.
+    - Cú pháp ternary: điều_kiện ? giá_trị_đúng : giá_trị_sai
+    -->
+  </head>
+  <body>
+    <h1>Bài tập 2 — Mở Console (F12) để xem kết quả</h1>
+
+    <script>
+      // ===== VIẾT CODE Ở ĐÂY =====
+
+      // TODO 1: if-else if-else xếp loại band
+      let band = 6.5;
+
+
+      // TODO 2: Ternary kiểm tra đạt yêu cầu
+      let soCauDung = 18;
+      const TONG = 40;
+
+
+      // TODO 3: switch-case thời lượng
+      let kyNang = "Writing";
+
+
+      // TODO 4: Toán tử logic && kiểm tra đậu
+      let daNopBai = true;
+
+    </script>
+  </body>
+</html>
