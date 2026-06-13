@@ -1,18 +1,30 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <script>
-      console.log(chaoMung("abc"));
-      function chaoMung(ten) {
-        console.log(`Xin chào ${ten}, chúc bạn học tốt!`);
-        return 123;
-      }
-    </script>
-    <script src="./main.js" type="module"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Learn Javascript</h1>
+  <script>
+    let kyNang = "Listening";
+    switch (kyNang) {
+      case "Listening":
+        console.log("Thời lượng: 30 phút");
+        break;
+      case "Reading":
+        console.log("Thời lượng: 60 phút");
+        break;
+      case "Writing":
+        console.log("Thời lượng: 60 phút");
+        break;
+      case "Speaking":
+        console.log("Thời lượng: 11–14 phút");
+        break;
+      default:
+        console.log("Kỹ năng không hợp lệ");
+    }
+  </script>
+</body>
 </html>

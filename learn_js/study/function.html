@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /* function hello(name) {
+        console.log(`Xin chào ${name}`);
+      }
+
+      hello("Lĩnh");
+      hello("Nam");
+      hello("Nhi");
+      hello("Trung Anh");
+      hello("Yến");
+      hello("Nhi");
+
+      const hi = (name) => {
+        console.log("Hello bro", name);
+      };
+
+      hi("CR7"); */
+
+      // Nhập năm sinh, tính số tuổi hiện nay và 5 năm sau thì bạn bao nhiêu tuổi.
+
+      /* 
+        - Tính tuổi hiện nay:
+        function tinhTuoiHienNay(namSinh) {
+            let tuoiHienTai = 2026 - namSinh;
+            console.log(`Tuổi của bạn hiện tại là: ${tuoiHienTai} tuổi`);
+            return tuoiHienTai;
+        }
+
+        - Tính tuổi 5 năm sau:
+        function tinhTuoi5NamSau(namSinh) {
+            let age = tinhTuoiHienNay(namSinh);
+            console.log(`Tuổi của bạn sau 5 năm là: ${age + 5} tuổi`);
+        }
+    */
+
+      const tinhTuoiHienNay = (namSinh) => {
+        let tuoiHienTai = 2026 - namSinh;
+        console.log(`Tuổi của bạn hiện tại là: ${tuoiHienTai} tuổi`);
+        return tuoiHienTai;
+      };
+
+      const tinhTuoi5NamSau = (namSinh) => {
+        let age = tinhTuoiHienNay(namSinh);
+        console.log(`Tuổi của bạn sau 5 năm là: ${age + 5} tuổi`);
+      };
+
+      // - Nhập năm sinh và tính tuổi 5 năm sau.
+      tinhTuoi5NamSau(2001);
+      tinhTuoi5NamSau(2013);
+      tinhTuoi5NamSau(2008);
+    </script>
+  </body>
+</html>
