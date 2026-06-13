@@ -51,16 +51,34 @@
 
       // TODO 1: if-else if-else xếp loại band
       let band = 6.5;
-
-
+      if(band >= 8.0)   console.log("Expert")
+      else if(band >= 6.5)   console.log("Competent")
+      else if(band >= 5.0)   console.log("Modest")
+      else    console.log(Beginner)
       // TODO 2: Ternary kiểm tra đạt yêu cầu
       let soCauDung = 18;
       const TONG = 40;
-
+      if(soCauDung >= 20)   console.log("Bạn đã đạt yêu cầu")
+      else    console.log("Bạn chưa đạt yêu cầu")
 
       // TODO 3: switch-case thời lượng
       let kyNang = "Writing";
-
+      switch(kyNang) {
+        case "Listening":
+          console.log("30 phút");
+          break;
+        case "Reading":
+          console.log("60 phút");
+          break;
+        case "Writing":
+          console.log("60 phút");
+          break;
+        case "Speaking":
+          console.log("11-14 phút");
+          break;
+        default:
+          console.log("Không hợp lệ")  
+      }
 
       // TODO 4: Toán tử logic && kiểm tra đậu
       let daNopBai = true;

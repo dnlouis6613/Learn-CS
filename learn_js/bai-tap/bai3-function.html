@@ -45,18 +45,30 @@
 
     <script>
       // ===== VIẾT CODE Ở ĐÂY =====
-
       // TODO 1: tinhPhanTram(dung, tong)
-
-
+        function tinhPhanTram(dung, tong) {
+          console.log((dung/ tong) * 100);
+        }
+        tinhPhanTram(35,40)
       // TODO 2: tinhTrungBinh(l, r, w, s)
-
+        function tinhTrungBinh(l,w,r,s) {
+          console.log((l+w+r+s)/4);
+        }
+        tinhTrungBinh(6.5, 7, 6, 7)
 
       // TODO 3: lamTronIelts(diem)
-
-
+        function lamTronIelts(diem) {
+          console.log(Math.round(diem * 2)/2)
+        }
+        lamTronIelts(6.625)
       // TODO 4: xepLoaiBand(band) — dùng return sớm
-
+        function xepLoaiBand(band) {
+          if(band >= 8.0) return "Expert";
+          else if(band >= 6.5)  return "Competent";
+          else if(band >= 5.0) return "Modest";
+          else console.log("Beginner")
+        }
+        console.log(xepLoaiBand(6.5))
 
       // TODO 5: Ghép chuỗi 3 hàm để in kết quả cuối
 
