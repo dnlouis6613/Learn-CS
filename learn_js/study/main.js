@@ -1,4 +1,6 @@
-import d, { tinhTrungBinh } from "./tinhDiem.js";
+import { lamTronIelts } from "./tinh-diem-IE.js";
+import { tinhTrungBinh } from "./tinhDiem.js";
+console.log(lamTronIelts(6));
 
-console.log(d);
-console.log(tinhTrungBinh(19, 20, 2, 5));
+// 5 10 15 20
+console.log(tinhTrungBinh(5, 10, 15, 20));
