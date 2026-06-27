@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài 3 - Object cơ bản</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <h1>BÀI 3: ĐỐI TƯỢNG (OBJECT) CƠ BẢN</h1>
+    <p class="subtitle">Thực hành: Tạo Object, truy cập, sửa, xóa, duyệt</p>
+
+    <div class="note">
+      📝 Làm việc với Object để lưu dữ liệu có cấu trúc. Mở Console (F12) để
+      kiểm tra.
+    </div>
+
+    <h2>TODO 1: Tạo Object & truy cập</h2>
+    <div class="output" id="out1"></div>
+    <p class="todo">
+      📌 Tạo Object <code>hocVien</code> với các thuộc tính:<br />
+      - <code>ten: "Lan Anh"</code><br />
+      - <code>diem: 7.0</code><br />
+      - <code>lop: "B1"</code><br />
+      - Truy cập bằng dot notation và in ra.
+    </p>
+
+    <h2>TODO 2: Sửa & Thêm thuộc tính</h2>
+    <div class="output" id="out2"></div>
+    <p class="todo">
+      📌 Lấy Object từ TODO 1.<br />
+      - Sửa <code>diem</code> thành 7.5.<br />
+      - Thêm thuộc tính mới: <code>tienHoc: 500000</code>.<br />
+      - In Object sau thay đổi.
+    </p>
+
+    <h2>TODO 3: Xóa thuộc tính</h2>
+    <div class="output" id="out3"></div>
+    <p class="todo">
+      📌 Lấy Object từ TODO 2.<br />
+      - Xóa thuộc tính <code>tienHoc</code> bằng <code>delete</code>.<br />
+      - In Object sau xóa.
+    </p>
+
+    <h2>TODO 4: Object.keys, values, entries</h2>
+    <div class="output" id="out4"></div>
+    <p class="todo">
+      📌 Tạo Object:
+      <code>{ ten: "Minh Tuấn", diem: 6.5, lop: "B2" }</code>.<br />
+      - Dùng <code>Object.keys()</code> để lấy danh sách khóa (key).<br />
+      - Dùng <code>Object.values()</code> để lấy danh sách giá trị.<br />
+      - Dùng <code>Object.entries()</code> để lấy cặp [key, value].<br />
+      - In cả ba kết quả.
+    </p>
+
+    <h2>TODO 5: Duyệt Object (for...in)</h2>
+    <div class="output" id="out5"></div>
+    <p class="todo">
+      📌 Tạo Object: <code>{ ten: "Thu Hà", diem: 5.5, lop: "A1" }</code>.<br />
+      - Dùng vòng lặp <code>for...in</code> duyệt Object.<br />
+      - In từng cặp key-value theo format: <code>"key: value"</code>.
+    </p>
+
+    <h2>TODO 6: Kiểm tra key tồn tại</h2>
+    <div class="output" id="out6"></div>
+    <p class="todo">
+      📌 Tạo Object: <code>{ ten: "Hùng", diem: 8.0 }</code>.<br />
+      - Dùng <code>in</code> operator để kiểm tra:<br />
+      - "ten" có tồn tại không?<br />
+      - "lop" có tồn tại không?<br />
+      - In kết quả kiểm tra.
+    </p>
+
+    <style>
+      .todo {
+        background-color: #e8f4f8;
+        border-left: 4px solid #3498db;
+        padding: 10px 14px;
+        border-radius: 6px;
+        margin: 12px 0 24px;
+        font-size: 14px;
+      }
+    </style>
+
+    <script>
+      function inRa(id, ...args) {
+        const dong = args
+          .map((a) => (typeof a === "object" ? JSON.stringify(a, null, 2) : a))
+          .join(" ");
+        console.log(...args);
+        document.getElementById(id).textContent += dong + "\n";
+      }
+
+      // TODO 1
+      // Code của bạn ở đây
+
+      // TODO 2
+      // Code của bạn ở đây
+
+      // TODO 3
+      // Code của bạn ở đây
+
+      // TODO 4
+      // Code của bạn ở đây
+
+      // TODO 5
+      // Code của bạn ở đây
+      // TODO 6
+      // Code của bạn ở đây
+    </script>
+  </body>
+</html>
