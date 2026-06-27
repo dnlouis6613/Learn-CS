@@ -62,8 +62,21 @@
       //   + Nếu band hiện tại dưới 5.5 thì sau mỗi buổi tăng 0.5
       //   + Nếu band hiện tại từ 5.5 trở lên thì sau mỗi buổi chỉ tăng 0.25 ( vì càng lên càng khó )
       // => Sử dụng vòng lặp white và if...else để *đếm số buổi học* cần để đạt được ít nhất 7 điểm.
-
+      let band = 4.5;
+      let soBuoiHoc = 0;
+      while(band < 7.0) {
+        if(band < 5.5)  band += 0.5
+        else band += 0.25
+        soBuoiHoc++;
+      }
+      console.log(`Cần ${soBuoiHoc} để đạt band 7.0`)
       // TODO 5: FizzBuzz 1..30
+      for(let i = 1; i <= 30; i++) {
+        if(i % 3 == 0 && i % 5 == 0) console.log("FizzBuzz")
+        else if(i % 3 == 0) console.log("Fizz")
+        else if(i % 5 == 0) console.log("Buzz")
+        else  console.log(i)
+      }
     </script>
   </body>
 </html>
