@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài 2 - Map, Filter, Reduce</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <h1>BÀI 2: MAP, FILTER, REDUCE & CÁC PHƯƠNG THỨC NÂNG CAO</h1>
+    <p class="subtitle">Thực hành: Biến đổi, lọc, gộp dữ liệu mảng</p>
+
+    <div class="note">
+      📝 Dùng map, filter, reduce, find để xử lý mảng. Mở Console (F12) để kiểm
+      tra.
+    </div>
+
+    <h2>TODO 1: map — biến đổi mỗi phần tử</h2>
+    <div class="output" id="out1"></div>
+    <p class="todo">
+      📌 Cho mảng điểm: <code>[6.5, 7.0, 5.5, 8.0]</code>.<br />
+      - Dùng <code>map()</code> để nâng mỗi điểm lên 0.5.<br />
+      - In mảng gốc và mảng sau biến đổi.
+    </p>
+
+    <h2>TODO 2: filter — lọc phần tử</h2>
+    <div class="output" id="out2"></div>
+    <p class="todo">
+      📌 Cho mảng điểm: <code>[6.5, 7.0, 5.5, 8.0, 6.0, 7.5]</code>.<br />
+      - Dùng <code>filter()</code> lọc những ai >= 7.0.<br />
+      - In mảng lọc được.
+    </p>
+
+    <h2>TODO 3: reduce — tính tổng & trung bình</h2>
+    <div class="output" id="out3"></div>
+    <p class="todo">
+      📌 Cho mảng điểm: <code>[6.5, 7.0, 5.5, 8.0]</code>.<br />
+      - Dùng <code>reduce()</code> tính tổng.<br />
+      - Tính trung bình (tổng / độ dài).<br />
+      - In cả tổng và trung bình (format 2 chữ số).
+    </p>
+
+    <h2>TODO 4: find & findIndex</h2>
+    <div class="output" id="out4"></div>
+    <p class="todo">
+      📌 Cho mảng: <code>[6.5, 7.0, 5.5, 8.0, 6.0]</code>.<br />
+      - Dùng <code>find()</code> để tìm phần tử đầu tiên >= 8.0.<br />
+      - Dùng <code>findIndex()</code> để tìm chỉ số của nó.<br />
+      - In cả giá trị tìm được và chỉ số.
+    </p>
+
+    <h2>TODO 5: Kết hợp map & filter</h2>
+    <div class="output" id="out5"></div>
+    <p class="todo">
+      📌 Cho mảng số: <code>[1, 2, 3, 4, 5, 6]</code>.<br />
+      - Lọc những số chẵn.<br />
+      - Bình phương mỗi số chẵn.<br />
+      - In kết quả. (Gợi ý: chain <code>filter(...).map(...)</code>)
+    </p>
+
+    <h2>TODO 6: Kết hợp filter & reduce</h2>
+    <div class="output" id="out6"></div>
+    <p class="todo">
+      📌 Cho mảng điểm: <code>[6.5, 7.0, 5.5, 8.0, 6.0]</code>.<br />
+      - Lọc những ai >= 6.5.<br />
+      - Tính trung bình của nhóm lọc được.<br />
+      - In kết quả.
+    </p>
+
+    <style>
+      .todo {
+        background-color: #e8f4f8;
+        border-left: 4px solid #3498db;
+        padding: 10px 14px;
+        border-radius: 6px;
+        margin: 12px 0 24px;
+        font-size: 14px;
+      }
+    </style>
+
+    <script>
+      function inRa(id, ...args) {
+        const dong = args
+          .map((a) => (typeof a === "object" ? JSON.stringify(a) : a))
+          .join(" ");
+        console.log(...args);
+        document.getElementById(id).textContent += dong + "\n";
+      }
+
+      // TODO 1
+      // Code của bạn ở đây
+
+      // TODO 2
+      // Code của bạn ở đây
+
+      // TODO 3
+      // Code của bạn ở đây
+
+      // TODO 4
+      // Code của bạn ở đây
+
+      // TODO 5
+      // Code của bạn ở đây
+
+      // TODO 6
+      // Code của bạn ở đây
+    </script>
+  </body>
+</html>

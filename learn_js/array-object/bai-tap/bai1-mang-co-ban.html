@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài 1 - Mảng cơ bản</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <h1>BÀI 1: MẢNG CƠ BẢN & CÁC PHƯƠNG THỨC</h1>
+    <p class="subtitle">
+      Thực hành: Tạo mảng, truy cập, sửa, push, pop, slice, splice
+    </p>
+
+    <div class="note">
+      📝 Hãy viết code để hoàn thành các bài tập dưới đây. Mở Console (F12) để
+      kiểm tra.
+    </div>
+
+    <h2>TODO 1: Tạo mảng và truy cập</h2>
+    <div class="output" id="out1"></div>
+    <p class="todo">
+      📌 Tạo mảng <code>diem</code> chứa: [6.5, 7.0, 5.5, 8.0, 6.0].<br />
+      In ra phần tử đầu, phần tử thứ 2, phần tử cuối.
+    </p>
+
+    <h2>TODO 2: push & pop</h2>
+    <div class="output" id="out2"></div>
+    <p class="todo">
+      📌 Cho mảng <code>danhSach = [1, 2, 3]</code>.<br />
+      - Dùng <code>push()</code> thêm 4 và 5 vào cuối.<br />
+      - In mảng lên Console.<br />
+      - Dùng <code>pop()</code> để lấy ra phần tử cuối cùng, in phần tử đó.
+    </p>
+
+    <h2>TODO 3: shift & unshift</h2>
+    <div class="output" id="out3"></div>
+    <p class="todo">
+      📌 Cho mảng <code>tên = ["An", "Bình", "Chi"]</code>.<br />
+      - Dùng <code>shift()</code> để lấy phần tử đầu, in phần tử đó.<br />
+      - Dùng <code>unshift()</code> để thêm "Đăng" vào đầu.<br />
+      - In mảng sau hai thao tác.
+    </p>
+
+    <h2>TODO 4: slice vs splice</h2>
+    <div class="output" id="out4"></div>
+    <p class="todo">
+      📌 Cho mảng <code>mang = [10, 20, 30, 40, 50]</code>.<br />
+      - Dùng <code>slice(1, 3)</code> để cắt (không đổi mảng gốc), in kết
+      quả.<br />
+      - Dùng <code>splice(2, 1)</code> để xóa 1 phần tử từ chỉ số 2, in kết quả
+      xóa và mảng sau đó.
+    </p>
+
+    <h2>TODO 5: Thêm/sửa phần tử</h2>
+    <div class="output" id="out5"></div>
+    <p class="todo">
+      📌 Tạo mảng <code>diem = [6.5, 7.0, 5.5]</code>.<br />
+      - Sửa phần tử chỉ số 1 thành 7.5.<br />
+      - Thêm phần tử 8.0 vào chỉ số 3 (cuối).<br />
+      - In mảng kết quả và độ dài mảng.
+    </p>
+
+    <style>
+      .todo {
+        background-color: #e8f4f8;
+        border-left: 4px solid #3498db;
+        padding: 10px 14px;
+        border-radius: 6px;
+        margin: 12px 0 24px;
+        font-size: 14px;
+      }
+    </style>
+
+    <script>
+      function inRa(id, ...args) {
+        const dong = args
+          .map((a) => (typeof a === "object" ? JSON.stringify(a) : a))
+          .join(" ");
+        console.log(...args);
+        document.getElementById(id).textContent += dong + "\n";
+      }
+
+      // TODO 1
+      // Code của bạn ở đây
+      // TODO 2
+      // Code của bạn ở đây
+
+      // TODO 3
+      // Code của bạn ở đây
+      // TODO 4
+      // Code của bạn ở đây
+      // TODO 5
+      // Code của bạn ở đây
+    </script>
+  </body>
+</html>

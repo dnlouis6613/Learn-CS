@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài 4 - Mảng Object & Bài toán thực tế</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <h1>BÀI 4: MẢNG CHỨA OBJECT & BÀI TOÁN THỰC TẾ</h1>
+    <p class="subtitle">
+      Thực hành: Xử lý dữ liệu phức tạp, map/filter/reduce trên mảng Object
+    </p>
+
+    <div class="note">
+      📝 Kết hợp mảng & Object để giải quyết bài toán thực tế. Mở Console (F12)
+      để kiểm tra.
+    </div>
+
+    <h2>TODO 1: Tạo mảng chứa Object & truy cập</h2>
+    <div class="output" id="out1"></div>
+    <p class="todo">
+      📌 Tạo mảng <code>danhSachHocVien</code> chứa 3 học viên với thuộc
+      tính:<br />
+      - <code>ten</code>, <code>diem</code>, <code>passed</code> (boolean)<br />
+      Ví dụ: <code>{ ten: "Lan Anh", diem: 7.0, passed: true }</code><br />
+      - In mảng và truy cập phần tử đầu, phần tử thứ 2.
+    </p>
+
+    <h2>TODO 2: map trên mảng Object</h2>
+    <div class="output" id="out2"></div>
+    <p class="todo">
+      📌 Dùng danh sách từ TODO 1.<br />
+      - Dùng <code>map()</code> để lấy danh sách <b>tên</b> của tất cả học
+      viên.<br />
+      - In danh sách tên.
+    </p>
+
+    <h2>TODO 3: filter trên mảng Object</h2>
+    <div class="output" id="out3"></div>
+    <p class="todo">
+      📌 Dùng danh sách từ TODO 1.<br />
+      - Dùng <code>filter()</code> lọc những học viên có
+      <code>passed = true</code>.<br />
+      - In danh sách học viên đã đậu (Object đầy đủ).
+    </p>
+
+    <h2>TODO 4: find trên mảng Object</h2>
+    <div class="output" id="out4"></div>
+    <p class="todo">
+      📌 Dùng danh sách từ TODO 1.<br />
+      - Dùng <code>find()</code> để tìm học viên có tên "Lan Anh".<br />
+      - In Object của học viên đó.
+    </p>
+
+    <h2>TODO 5: reduce trên mảng Object</h2>
+    <div class="output" id="out5"></div>
+    <p class="todo">
+      📌 Dùng danh sách từ TODO 1.<br />
+      - Dùng <code>reduce()</code> tính <b>tổng điểm</b> của tất cả học viên.<br />
+      - Tính <b>trung bình điểm</b>.<br />
+      - In cả tổng và trung bình (format 2 chữ số).
+    </p>
+
+    <h2>TODO 6: Bài toán: lọc & tính trung bình</h2>
+    <div class="output" id="out6"></div>
+    <p class="todo">
+      📌 <b>Bài toán:</b> Tính trung bình điểm của
+      <b>những học viên đã đậu</b>.<br />
+      Dùng danh sách từ TODO 1.<br />
+      - Lọc những ai <code>passed = true</code>.<br />
+      - Tính trung bình điểm của nhóm lọc.<br />
+      - In kết quả. (Gợi ý: chain <code>filter(...).reduce(...)</code>)
+    </p>
+
+    <h2>TODO 7: Bài toán: thêm/sửa Object trong mảng</h2>
+    <div class="output" id="out7"></div>
+    <p class="todo">
+      📌 <b>Bài toán:</b> Thêm thuộc tính "xếp loại" cho mỗi học viên dựa trên
+      điểm.<br />
+      Dùng danh sách từ TODO 1, dùng <code>map()</code> để:<br />
+      - Giữ nguyên các thuộc tính cũ.<br />
+      - Thêm <code>xepLoai</code> dựa trên điểm:<br />
+      - diem >= 7.5: "Excellent"<br />
+      - diem >= 6.5: "Good"<br />
+      - diem >= 5.0: "Fair"<br />
+      - diem < 5.0: "Poor"<br />
+      - In mảng mới với thuộc tính <code>xepLoai</code>.
+    </p>
+
+    <h2>TODO 8: Bài toán: nhóm dữ liệu (group by)</h2>
+    <div class="output" id="out8"></div>
+    <p class="todo">
+      📌 <b>Bài toán:</b> Nhóm học viên theo
+      <code>passed</code> (true/false).<br />
+      Dùng danh sách từ TODO 1, dùng <code>reduce()</code> để:<br />
+      - Tạo Object với 2 khóa: <code>passed</code> (mảng tên đã đậu) và
+      <code>failed</code> (mảng tên chưa đậu).<br />
+      - Kết quả dạng:
+      <code>{ passed: ["Lan Anh", "..."], failed: ["..."] }</code><br />
+      - In kết quả.
+    </p>
+
+    <style>
+      .todo {
+        background-color: #e8f4f8;
+        border-left: 4px solid #3498db;
+        padding: 10px 14px;
+        border-radius: 6px;
+        margin: 12px 0 24px;
+        font-size: 14px;
+      }
+    </style>
+
+    <script>
+      function inRa(id, ...args) {
+        const dong = args
+          .map((a) => (typeof a === "object" ? JSON.stringify(a, null, 2) : a))
+          .join(" ");
+        console.log(...args);
+        document.getElementById(id).textContent += dong + "\n";
+      }
+
+      // TODO 1
+      // Code của bạn ở đây
+
+      // TODO 2
+      // Code của bạn ở đây
+
+      // TODO 3
+      // Code của bạn ở đây
+
+      // TODO 4
+      // Code của bạn ở đây
+
+      // TODO 5
+      // Code của bạn ở đây
+
+      // TODO 6
+      // Code của bạn ở đây
+
+      // TODO 7
+      // Code của bạn ở đây
+
+      // TODO 8
+      // Code của bạn ở đây
+    </script>
+  </body>
+</html>
